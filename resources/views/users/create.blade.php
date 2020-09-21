@@ -1,4 +1,6 @@
 @extends('layouts.default')
+@extends('layouts.default')
+@extends('layouts.default')
 @section('title', '注册')
 
 @section('content')
