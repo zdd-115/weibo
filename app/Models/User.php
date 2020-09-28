@@ -70,11 +70,7 @@ class User extends Authenticatable
 
     public function followers()
     {
-<<<<<<< HEAD
-        return $this->belongsToMany(User::class, 'followers', 'user_id', 'follower_id');
-=======
         return $this->belongsToMany(User::Class, 'followers', 'user_id', 'follower_id');
->>>>>>> following-users
     }
 
     public function followings()
@@ -84,12 +80,8 @@ class User extends Authenticatable
 
     public function follow($user_ids)
     {
-<<<<<<< HEAD
-        if (!is_array($user_ids))
-        {
-=======
+
         if ( ! is_array($user_ids)) {
->>>>>>> following-users
             $user_ids = compact('user_ids');
         }
         $this->followings()->sync($user_ids, false);
@@ -97,12 +89,7 @@ class User extends Authenticatable
 
     public function unfollow($user_ids)
     {
-<<<<<<< HEAD
-        if (!is_array($user_ids))
-        {
-=======
         if ( ! is_array($user_ids)) {
->>>>>>> following-users
             $user_ids = compact('user_ids');
         }
         $this->followings()->detach($user_ids);
